@@ -33,6 +33,10 @@ app.post('/', function (req, res) {
   res.send(JSON.stringify(filter(req.body), null, 2));
 });
 
+app.get('/', function (req, res) {
+    res.send('MI9 Coding Challenge');
+});
+
 http.createServer( app ).listen( app.get( 'port' ), function (){
   console.log( 'Express server listening on port ' + app.get( 'port' ));
 });
