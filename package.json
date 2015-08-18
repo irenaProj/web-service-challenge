@@ -11,6 +11,6 @@
   "author": "Irena Shemesh <irena.shemesh@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.12.4",
+    "express": "^4.12.4"
   }
 }
