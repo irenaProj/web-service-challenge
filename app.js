@@ -30,14 +30,14 @@ app.use(function(err,req,res,next) {
   }
 });
 
-// Serve static files
-app.use(express.static(__dirname + '/client'));
-
 // Process received input
 app.post('/', function (req, res) {
   res.setHeader('Content-Type', 'application/json');
   res.send(JSON.stringify(filter(req.body), null, 2));
 });
+
+// Serve static files
+app.use(express.static(__dirname + '/client'));
 
 http.createServer( app ).listen( app.get( 'port' ), function (){
   console.log( 'Express server listening on port ' + app.get( 'port' ));
