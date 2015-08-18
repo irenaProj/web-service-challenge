@@ -7,7 +7,7 @@
   },
   "description": "Coding Challenge: a small JSON-based web service",
   "main": "app.js",
-  "repository": "",
+  "repository": "https://github.com/irenaProj/web-service-challenge.git",
   "author": "Irena Shemesh <irena.shemesh@gmail.com>",
   "license": "MIT",
   "dependencies": {
