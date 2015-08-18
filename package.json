@@ -1,0 +1,16 @@
+{
+  "name": "web-service-challenge",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "description": "Coding Challenge: a small JSON-based web service",
+  "main": "app.js",
+  "repository": "",
+  "author": "Irena Shemesh <irena.shemesh@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.12.4",
+  }
+}
