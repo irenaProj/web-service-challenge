@@ -1,8 +1,10 @@
 var express        = require('express');
 var bodyParser     = require('body-parser');
 var http           = require('http');
-var app            = express();
 var filter         = require('./controllers/drm-filter');
+var path           = require("path");
+
+var app            = express();
 
 // Error object to be returned in request JSON data is invalid 
 var INVALID_JSON_ERROR_OBJ = {
@@ -28,13 +30,12 @@ app.use(function(err,req,res,next) {
   }
 });
 
+// Serve static files
+app.use(express.static(__dirname + '/client'));
+
 // Process received input
 app.post('/', function (req, res) {
   res.send(JSON.stringify(filter(req.body), null, 2));
-});
-
-app.get('/', function (req, res) {
-    res.send('MI9 Coding Challenge');
 });
 
 http.createServer( app ).listen( app.get( 'port' ), function (){
