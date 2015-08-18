@@ -35,6 +35,7 @@ app.use(express.static(__dirname + '/client'));
 
 // Process received input
 app.post('/', function (req, res) {
+  res.setHeader('Content-Type', 'application/json');
   res.send(JSON.stringify(filter(req.body), null, 2));
 });
 
