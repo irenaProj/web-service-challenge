@@ -23,6 +23,7 @@ app.use(function(err,req,res,next) {
   console.log('Bad request');
   
   if (err) {
+    res.setHeader('Content-Type', 'application/json');
     res.status(400).send(JSON.stringify(INVALID_JSON_ERROR_OBJ, null, 2));
   } else {
     // JSON is fine, continue
